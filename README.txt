@@ -1,0 +1,1 @@
+Jeśli sa jakieś uwagi, coś do poprawienia to proszę o feedback
