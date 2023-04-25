@@ -15,10 +15,10 @@ require ('baza.php');
         if(isset($_POST['imie'])&&!empty($_POST['imie'])&&isset($_POST['nazwisko'])&&!empty($_POST['nazwisko'])&&isset($_POST['miejscowosc'])&&!empty($_POST['miejscowosc'])&&isset($_POST['PESEL'])&&!empty($_POST['PESEL']))
         {
             if (strlen($_POST['PESEL']) <11){
-                die(' PESEL musi miec 11 liter '); 
+                die(' PESEL musi miec 11 cyfr '); 
           }
           if (strlen($_POST['PESEL']) >11){
-            die(' PESEL musi miec 11 liter '); 
+            die(' PESEL musi miec 11 cyfr '); 
       }
             if($PESEL<0){
                 exit("PESEL nie przyjmuje wartosci ujemnych");

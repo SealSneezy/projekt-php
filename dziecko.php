@@ -62,7 +62,7 @@
 
     Miejscowość <br> <input type="text" name="miejscowosc" placeholder="Miejscowość"> <br>
 
-    PESEL <br> <input type="number" name="PESEL" placeholder="PESEL"> <br>
+    PESEL <br> <input type="number" name="PESEL" placeholder="PESEL" maxlength="11"> <br>
     <input type="submit" value="Zapisz">
     <input type="reset" value="Cofnij">
     </form>
