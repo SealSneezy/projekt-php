@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Czas generowania: 04 Kwi 2023, 13:46
--- Wersja serwera: 10.4.27-MariaDB
--- Wersja PHP: 8.2.0
+-- Czas generowania: 25 Kwi 2023, 18:44
+-- Wersja serwera: 10.4.24-MariaDB
+-- Wersja PHP: 8.1.6
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -32,16 +32,15 @@ CREATE TABLE `dzieci` (
   `Nazwisko` text NOT NULL,
   `Miejscowosc` text NOT NULL,
   `PESEL` varchar(11) NOT NULL,
-  `DaneRodzica` text NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
+  `EmailRodzica` varchar(100) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Zrzut danych tabeli `dzieci`
 --
 
-INSERT INTO `dzieci` (`Imie`, `Nazwisko`, `Miejscowosc`, `PESEL`, `DaneRodzica`) VALUES
-('Wy', 'dada', 'wro', '31552362623', 'W'),
-('losowe', 'imie', 'miej', '23131231312', 'Wypy');
+INSERT INTO `dzieci` (`Imie`, `Nazwisko`, `Miejscowosc`, `PESEL`, `EmailRodzica`) VALUES
+('Ja', 'ja', 'ja', '12345678910', 'e@op.pl');
 
 -- --------------------------------------------------------
 
@@ -56,18 +55,17 @@ CREATE TABLE `rodzice` (
   `nazwisko` text NOT NULL,
   `Adres` varchar(100) NOT NULL,
   `Haslo` varchar(100) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Zrzut danych tabeli `rodzice`
 --
 
 INSERT INTO `rodzice` (`id`, `email`, `imie`, `nazwisko`, `Adres`, `Haslo`) VALUES
-(2, 'Jaca', 'Jac', 'Kowal', 'Jacek', 'J'),
-(30, 'WWWWW', 'W', 'W', 'W', 'W'),
-(32, 'WWWWWW', 'W', 'W', 'W', 'W'),
-(33, 'Wypy', 'WW', 'WW', 'WW', 'WW'),
-(48, 'Wypychowski', 'W', 'W', 'W', 'w');
+(56, 'eww@op.pl', 'Jajo', 'jrjr', 'jaji', 'jrj'),
+(71, 'esssssa@op.pl', 'jakub', 'wypychowski', 'miejscowosc', 'e'),
+(72, 'eee@op.pl', 'e', 'eee', 'eee', '11'),
+(74, 'e@op.pl', 'e', 'e', 'e', 'e');
 
 --
 -- Indeksy dla zrzutów tabel
@@ -87,7 +85,7 @@ ALTER TABLE `rodzice`
 -- AUTO_INCREMENT dla tabeli `rodzice`
 --
 ALTER TABLE `rodzice`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=51;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=75;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
